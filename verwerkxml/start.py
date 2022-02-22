@@ -8,19 +8,21 @@ deboekendf = pd.read_xml('boeken.xml')
 print(deboekendf.info())
 print(deboekendf['title'])
 data = []
-deboeken = pd.DataFrame(data)
 
+
+#iwp321pwi
 
 for obj, boek in deboekendf.iterrows():  ## dit stukje werkt nog niet
     if boek['price'] < 10 :
         print(boek['title'])
         #global deboeken
-        deboeken.add(boek['title'])
+        data.append(boek)
 
 print("===========================")
+deboeken = pd.DataFrame(data)
 print(deboeken)
 
-deboekendf.to_csv('ffkijken.csv',';')
+deboeken.to_csv('ffkijken.csv',';')
 
 
 
