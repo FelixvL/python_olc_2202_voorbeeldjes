@@ -9,7 +9,8 @@ print(deboekendf.columns)
 print(deboekendf['title'])
 
 for obj, boek in deboekendf.iterrows():
-    print(boek['title'])
+    if boek['price'] < 10 :
+        print(boek['title'])
 
 
 
