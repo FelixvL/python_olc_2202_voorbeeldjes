@@ -23,7 +23,10 @@ deboeken = pd.DataFrame(data)
 print(deboeken)
 
 deboeken.to_csv('ffkijken.csv',';')
-
+print("++++++++++++++++++++++++++++++++++++++")
+df = deboekendf
+dfCheap = df[df.price < 20]['title']
+print(dfCheap)
 
 
 
