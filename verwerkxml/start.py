@@ -7,10 +7,20 @@ deboekendf = pd.read_xml('boeken.xml')
 #print(deboekendf.head(5))
 print(deboekendf.info())
 print(deboekendf['title'])
+data = []
+deboeken = pd.DataFrame(data)
 
-for obj, boek in deboekendf.iterrows():
+
+for obj, boek in deboekendf.iterrows():  ## dit stukje werkt nog niet
     if boek['price'] < 10 :
         print(boek['title'])
+        #global deboeken
+        deboeken.add(boek['title'])
+
+print("===========================")
+print(deboeken)
+
+deboekendf.to_csv('ffkijken.csv',';')
 
 
 
