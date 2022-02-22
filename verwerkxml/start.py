@@ -5,7 +5,7 @@ import pandas as pd
 
 deboekendf = pd.read_xml('boeken.xml')
 #print(deboekendf.head(5))
-print(deboekendf.columns)
+print(deboekendf.info())
 print(deboekendf['title'])
 
 for obj, boek in deboekendf.iterrows():
